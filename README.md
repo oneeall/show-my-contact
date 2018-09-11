@@ -1,6 +1,6 @@
 # phone_number_show_app
 
-A new Flutter application.
+A new Flutter application using qr_flutter for qr-code & bloc for make dynamically theme.
 
 ## Getting Started
 
