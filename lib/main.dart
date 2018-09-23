@@ -94,19 +94,22 @@ class _MyHomePageState extends State<MyHomePage> {
     if (vcard == null) {
       return Text('Please input data..');
     } else {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          QrImage(
-              data: vcard,
-              size: 300.0,
-              backgroundColor:
-                  widget.isDarkEnabled ? Colors.white : Colors.white),
-          Padding(
-            padding: const EdgeInsets.only(top: 18.0),
-            child: Text('Scan Me..', style: TextStyle(fontSize: 18.0),),
-          )
-        ],
+      return AspectRatio(
+        aspectRatio: 50/50,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            QrImage(
+                data: vcard,
+                size: MediaQuery.of(context).size.height / 2,
+                backgroundColor:
+                    widget.isDarkEnabled ? Colors.white : Colors.white),
+            Padding(
+              padding: const EdgeInsets.only(top: 18.0),
+              child: Text('Scan you', style: TextStyle(fontSize: 18.0),),
+            )
+          ],
+        ),
       );
     }
   }
